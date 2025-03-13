@@ -2,27 +2,53 @@
   "expo": {
     "name": "Couply",
     "slug": "Couply",
+    "scheme": "couply",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
+    "icon": "./app/assets/images/icon.png",
     "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sirwacheski.couply"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+      "package": "com.sirwacheski.couply",
+      "softwareKeyboardLayoutMode": "resize"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "plugins": [
+      [
+        "expo-system-ui"
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FF0054",
+          "image": "./app/assets/images/logo.png",
+          "imageWidth": 100
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./app/assets/fonts/Sora-Light.ttf",
+            "./app/assets/fonts/Sora-Regular.ttf",
+            "./app/assets/fonts/Sora-SemiBold.ttf",
+            "./app/assets/fonts/Sora-Bold.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
