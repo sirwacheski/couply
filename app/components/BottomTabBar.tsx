@@ -1,7 +1,7 @@
 import React from "react";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import Animated, { useAnimatedStyle } from "react-native-reanimated";
-import { Image, ImageRequireSource, Text, TouchableOpacity } from "react-native";
+import { Image, ImageRequireSource, Platform, Text, TouchableOpacity } from "react-native";
 
 type TabMenu = {
   [key: string]: {
@@ -19,11 +19,11 @@ export function BottomTabBar({ insets, state, navigation }: BottomTabBarProps) {
     paddingVertical: 12.5,
     alignSelf: "center",
     position: "absolute",
-    bottom: insets.bottom,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-around",
     backgroundColor: "#F01448",
+    justifyContent: "space-around",
+    bottom: insets.bottom + Platform.OS == "ios" ? 0 : 20,
   }), [insets.bottom]);
 
   const TabMenu: TabMenu = {

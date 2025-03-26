@@ -1,19 +1,15 @@
 import React from "react";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
-import { Avatar, Logo, Screen, BottomSheet, useBottomSheet, Icon } from "@components";
+import { Text, View } from "react-native";
+import { AttachmentPickerBottomSheet, Avatar, Logo, Screen, useAttachmentPickerBottomSheet } from "@components";
 
 import { useProfileDetailsModel } from "./details.model";
 
 export default function ProfileDetails() {
-  // Common hooks
-  const insets = useSafeAreaInsets();
-
-  // Reference hooks
-  const bottomSheetRef = useBottomSheet();
-
   // Model hooks
   const { profileQuery, handlePickAttachment } = useProfileDetailsModel();
+
+  // Reference hooks
+  const attachmentPickerRef = useAttachmentPickerBottomSheet();
   
   return (
     <Screen
@@ -28,7 +24,7 @@ export default function ProfileDetails() {
         withChangeButton={true}
         username={profileQuery.data?.name}
         uri={profileQuery.data?.avatar?.url}
-        onPressChangeButton={() => handlePickAttachment()}
+        onPressChangeButton={() => attachmentPickerRef.current?.show()}
         />
         <View
         className="mt-10">
@@ -44,6 +40,11 @@ export default function ProfileDetails() {
           </Text>
         </View>
       </View>
+
+      <AttachmentPickerBottomSheet
+      ref={attachmentPickerRef}
+      onPick={handlePickAttachment}
+      />
     </Screen>
   );
 }

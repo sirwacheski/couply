@@ -13,8 +13,7 @@
       "bundleIdentifier": "com.sirwacheski.couply"
     },
     "android": {
-      "package": "com.sirwacheski.couply",
-      "softwareKeyboardLayoutMode": "resize"
+      "package": "com.sirwacheski.couply"
     },
     "plugins": [
       [

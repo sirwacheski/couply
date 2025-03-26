@@ -5,6 +5,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { useAuthRepository } from "@infra/repositories/AuthRepository";
+import { KeyboardProvider } from "react-native-keyboard-controller";
 
 import QueryProvider from "./QueryProvider";
 
@@ -40,11 +41,13 @@ export default function ApplicationProvider({ children }: React.PropsWithChildre
 
   return (
     <GestureHandlerRootView>
-      <BottomSheetModalProvider>
-        <QueryProvider>
-          {children}
-        </QueryProvider>
-      </BottomSheetModalProvider>
+      <QueryProvider>
+        <KeyboardProvider>
+          <BottomSheetModalProvider>
+            {children}
+          </BottomSheetModalProvider>
+        </KeyboardProvider>
+      </QueryProvider>
     </GestureHandlerRootView>
   );
 }

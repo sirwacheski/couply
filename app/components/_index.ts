@@ -7,5 +7,5 @@ export { DateField } from "./DateField";
 export { Avatar } from "./Avatar";
 export { FeatureOption } from "./FeatureOption";
 export { BottomTabBar } from "./BottomTabBar";
-export { BottomSheet, useBottomSheet } from "./BottomSheet";
 export { GoBackButton } from "./GoBackButton";
+export { AttachmentPickerBottomSheet, useAttachmentPickerBottomSheet, AttachmentAsset } from "./AttachmentPickerBottomSheet";

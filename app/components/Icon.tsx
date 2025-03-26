@@ -1,12 +1,12 @@
 import Feather from "@expo/vector-icons/Feather";
 
-type Properties = {
+export type IconProps = {
   size?: number;
   color?: string;
   name: keyof typeof Feather.glyphMap;
 }
 
-export function Icon({ name, size, color }: Properties) {
+export function Icon({ name, size, color }: IconProps) {
   return (
     <Feather
     name={name}

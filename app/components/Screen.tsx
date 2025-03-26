@@ -1,8 +1,9 @@
 import React from "react";
+import { Platform, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated, { useAnimatedStyle } from "react-native-reanimated";
-import { KeyboardAvoidingView, Platform, ScrollView } from "react-native";
+import { KeyboardAvoidingView } from "react-native-keyboard-controller";
 
 type ScreenProps = {
   children?: React.ReactNode;
@@ -19,23 +20,30 @@ function Screen({ withSafeAreaView, children }: ScreenProps) {
   const styles = useAnimatedStyle(() => ({
     width: "100%",
     height: "100%",
-    paddingHorizontal: Screen.Padding,
-    paddingTop: withSafeAreaView ? insets.top : 0,
-    paddingBottom: withSafeAreaView ? insets.bottom : 0,
-  }), [withSafeAreaView, insets]);
+    paddingHorizontal: 20,
+    paddingTop: withSafeAreaView ? Platform.OS == "ios" ? insets.top : (insets.top + 10) : 0,
+    paddingBottom: withSafeAreaView ? Platform.OS == "ios" ? insets.bottom : (insets.bottom + 20) : 0,
+  }), [withSafeAreaView, insets.top, insets.bottom]);
   
   return (
-    <KeyboardAvoidingView
-    behavior={Platform.OS == "ios" ? "position" : "padding"}>
-      <AnimateLinearGradient
-      style={styles}
-      end={{ x: 1, y: 1 }}
-      locations={[0.1, 1]}
-      start={{ x: 0, y: 0 }}
-      colors={["#FF0054", "#F93A3A"]}>
-        {children}
-      </AnimateLinearGradient>
-    </KeyboardAvoidingView>
+    <AnimateLinearGradient
+    style={styles}
+    end={{ x: 1, y: 1 }}
+    locations={[0.1, 1]}
+    start={{ x: 0, y: 0 }}
+    colors={["#FF0054", "#F93A3A"]}>
+      <KeyboardAvoidingView
+      behavior="position"
+      keyboardVerticalOffset={20}>
+        <ScrollView
+        scrollEnabled={false}
+        showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps={"handled"}
+        contentContainerStyle={{ height: "100%" }}>
+          {children}
+        </ScrollView>
+      </KeyboardAvoidingView>
+    </AnimateLinearGradient>
   );
 }
 

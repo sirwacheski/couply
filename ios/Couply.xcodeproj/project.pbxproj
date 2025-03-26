@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06585B6AB3464F63B60752C0 /* Sora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F390018969EA4303A4C4396C /* Sora-SemiBold.ttf */; };
+		00496121CD3A4A05B9B17570 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4853B02382454E3C958E489A /* noop-file.swift */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		25786D38D91FB76D92EFB644 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = ED1D8276F8BD373381529349 /* PrivacyInfo.xcprivacy */; };
-		2654F393DCB741A0AD57D175 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58907124C2F41ECAE7DDDE9 /* noop-file.swift */; };
-		3B34B34F0331431D8229BA45 /* Sora-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A59AF08A6F7944F3980E33AD /* Sora-Light.ttf */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		4CD25DCDA859401DBB93FA42 /* Sora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D414BF8C820240F1ABF132D2 /* Sora-Regular.ttf */; };
+		821225070047E065ADB4F644 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 15E1CD90CE9348BEA0EF5547 /* PrivacyInfo.xcprivacy */; };
+		888EA0545CF849F095D81AAC /* Sora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8ADF81381B4626AAB15733 /* Sora-SemiBold.ttf */; };
 		96905EF65AED1B983A6B3ABC /* libPods-Couply.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Couply.a */; };
-		B05EF093F52949F6A1C54262 /* Sora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC1D92268982464D97E23264 /* Sora-Bold.ttf */; };
+		9CC89CA00CA249B3AB6C26D0 /* Sora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DD2F4C01542437BB1157CCF /* Sora-Regular.ttf */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		E6196195EDA9474493B754B6 /* Sora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A74DF4AE37C54728A80F5060 /* Sora-Bold.ttf */; };
+		FAD875B72FAB41BDAE15E6FE /* Sora-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4955B175EDDE4A8189912B58 /* Sora-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,19 +29,19 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Couply/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Couply/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Couply/main.m; sourceTree = "<group>"; };
+		15E1CD90CE9348BEA0EF5547 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Couply/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3F8ADF81381B4626AAB15733 /* Sora-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-SemiBold.ttf"; path = "../app/assets/fonts/Sora-SemiBold.ttf"; sourceTree = "<group>"; };
+		4853B02382454E3C958E489A /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "Couply/noop-file.swift"; sourceTree = "<group>"; };
+		4955B175EDDE4A8189912B58 /* Sora-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Light.ttf"; path = "../app/assets/fonts/Sora-Light.ttf"; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Couply.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Couply.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2E3173556A471DD304B334 /* Pods-Couply.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Couply.debug.xcconfig"; path = "Target Support Files/Pods-Couply/Pods-Couply.debug.xcconfig"; sourceTree = "<group>"; };
+		6DD2F4C01542437BB1157CCF /* Sora-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Regular.ttf"; path = "../app/assets/fonts/Sora-Regular.ttf"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-Couply.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Couply.release.xcconfig"; path = "Target Support Files/Pods-Couply/Pods-Couply.release.xcconfig"; sourceTree = "<group>"; };
-		9792C8C2CCD241FE8C878991 /* Couply-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Couply-Bridging-Header.h"; path = "Couply/Couply-Bridging-Header.h"; sourceTree = "<group>"; };
-		A59AF08A6F7944F3980E33AD /* Sora-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Light.ttf"; path = "../app/assets/fonts/Sora-Light.ttf"; sourceTree = "<group>"; };
+		8526298C70F14A00A55F7752 /* Couply-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Couply-Bridging-Header.h"; path = "Couply/Couply-Bridging-Header.h"; sourceTree = "<group>"; };
+		A74DF4AE37C54728A80F5060 /* Sora-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Bold.ttf"; path = "../app/assets/fonts/Sora-Bold.ttf"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = Couply/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		C58907124C2F41ECAE7DDDE9 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "Couply/noop-file.swift"; sourceTree = "<group>"; };
-		D414BF8C820240F1ABF132D2 /* Sora-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Regular.ttf"; path = "../app/assets/fonts/Sora-Regular.ttf"; sourceTree = "<group>"; };
-		DC1D92268982464D97E23264 /* Sora-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Bold.ttf"; path = "../app/assets/fonts/Sora-Bold.ttf"; sourceTree = "<group>"; };
-		ED1D8276F8BD373381529349 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Couply/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F390018969EA4303A4C4396C /* Sora-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-SemiBold.ttf"; path = "../app/assets/fonts/Sora-SemiBold.ttf"; sourceTree = "<group>"; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-Couply/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,9 +67,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				C58907124C2F41ECAE7DDDE9 /* noop-file.swift */,
-				9792C8C2CCD241FE8C878991 /* Couply-Bridging-Header.h */,
-				ED1D8276F8BD373381529349 /* PrivacyInfo.xcprivacy */,
+				4853B02382454E3C958E489A /* noop-file.swift */,
+				8526298C70F14A00A55F7752 /* Couply-Bridging-Header.h */,
+				15E1CD90CE9348BEA0EF5547 /* PrivacyInfo.xcprivacy */,
 			);
 			name = Couply;
 			sourceTree = "<group>";
@@ -81,6 +81,18 @@
 				58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Couply.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B1E12CF22C741FFBCD546DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4955B175EDDE4A8189912B58 /* Sora-Light.ttf */,
+				6DD2F4C01542437BB1157CCF /* Sora-Regular.ttf */,
+				3F8ADF81381B4626AAB15733 /* Sora-SemiBold.ttf */,
+				A74DF4AE37C54728A80F5060 /* Sora-Bold.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -99,7 +111,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
-				A41A12B2DC6E4D4FAF630918 /* Resources */,
+				7B1E12CF22C741FFBCD546DB /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -120,18 +132,6 @@
 				FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */,
 			);
 			name = Couply;
-			sourceTree = "<group>";
-		};
-		A41A12B2DC6E4D4FAF630918 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A59AF08A6F7944F3980E33AD /* Sora-Light.ttf */,
-				D414BF8C820240F1ABF132D2 /* Sora-Regular.ttf */,
-				F390018969EA4303A4C4396C /* Sora-SemiBold.ttf */,
-				DC1D92268982464D97E23264 /* Sora-Bold.ttf */,
-			);
-			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		BB2F792B24A3F905000567C9 /* Supporting */ = {
@@ -168,13 +168,13 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Couply" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				004EB6712BB5CDB98FD5BD7D /* [Expo] Configure project */,
+				D74954D47BC6E54D69C07E0D /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				2FB622BBF246F337FA95C3BA /* [CP] Embed Pods Frameworks */,
+				C7E3217C17111B9348C022D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,36 +224,17 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				3B34B34F0331431D8229BA45 /* Sora-Light.ttf in Resources */,
-				4CD25DCDA859401DBB93FA42 /* Sora-Regular.ttf in Resources */,
-				06585B6AB3464F63B60752C0 /* Sora-SemiBold.ttf in Resources */,
-				B05EF093F52949F6A1C54262 /* Sora-Bold.ttf in Resources */,
-				25786D38D91FB76D92EFB644 /* PrivacyInfo.xcprivacy in Resources */,
+				FAD875B72FAB41BDAE15E6FE /* Sora-Light.ttf in Resources */,
+				9CC89CA00CA249B3AB6C26D0 /* Sora-Regular.ttf in Resources */,
+				888EA0545CF849F095D81AAC /* Sora-SemiBold.ttf in Resources */,
+				E6196195EDA9474493B754B6 /* Sora-Bold.ttf in Resources */,
+				821225070047E065ADB4F644 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		004EB6712BB5CDB98FD5BD7D /* [Expo] Configure project */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Expo] Configure project";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-Couply/expo-configure-project.sh\"\n";
-		};
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -291,24 +272,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2FB622BBF246F337FA95C3BA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Couply/Pods-Couply-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Couply/Pods-Couply-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +306,43 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Couply/Pods-Couply-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C7E3217C17111B9348C022D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Couply/Pods-Couply-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Couply/Pods-Couply-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D74954D47BC6E54D69C07E0D /* [Expo] Configure project */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Expo] Configure project";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-Couply/expo-configure-project.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -353,7 +353,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				2654F393DCB741A0AD57D175 /* noop-file.swift in Sources */,
+				00496121CD3A4A05B9B17570 /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +384,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sirwacheski.couply;
-				PRODUCT_NAME = "Couply";
+				PRODUCT_NAME = Couply;
 				SWIFT_OBJC_BRIDGING_HEADER = "Couply/Couply-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -412,7 +412,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sirwacheski.couply;
-				PRODUCT_NAME = "Couply";
+				PRODUCT_NAME = Couply;
 				SWIFT_OBJC_BRIDGING_HEADER = "Couply/Couply-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,7 +1,5 @@
 import { Alert } from "react-native";
-import * as ImagePicker from "expo-image-picker";
-import { NavigationProp, useNavigation } from "@react-navigation/native";
-import { PrivateRouteList } from "app/routes/private.routes";
+import { AttachmentAsset } from "@components";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useProfileRepository } from "@infra/repositories/ProfileRepository";
 import { useAttachmentRepository } from "@infra/repositories/AttachmentRepository";
@@ -12,18 +10,15 @@ export function useProfileDetailsModel() {
   const queryClient = useQueryClient();
   const profileQuery = useSessionProfileQuery();
 
-  // Navigation hooks
-  const navigation = useNavigation<NavigationProp<PrivateRouteList>>();
-
   // Mutation hooks
   const changeAvatarMutation = useMutation({
-    async mutationFn(file: ImagePicker.ImagePickerAsset) {
+    async mutationFn(file: AttachmentAsset) {
       const attachmentRepository = useAttachmentRepository();
 
       const attachment = await attachmentRepository.upload({
         uri: file.uri,
-        type: file.mimeType!,
-        size: file.fileSize!,
+        type: file.type,
+        size: file.size,
       });
       
       if(!profileQuery.data?.id) {
@@ -43,7 +38,9 @@ export function useProfileDetailsModel() {
   });
 
   // Handlers
-  async function handlePickAttachment() {
+  async function handlePickAttachment(assets: AttachmentAsset[]) {
+    const asset = assets.at(0)!;
+    changeAvatarMutation.mutate(asset);
   }
 
   return {

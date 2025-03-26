@@ -50,10 +50,17 @@ export function useMuralRepository() {
     .eq("guest_id", profileId);
   }
 
+  async function acceptInvite(id: string) {
+    return supabase.rpc("accept_invitation", {
+      invite_id: id,
+    });
+  }
+
   return {
     getOne,
     create,
     invite,
     getInvitesByProfile,
+    acceptInvite,
   }
 }
