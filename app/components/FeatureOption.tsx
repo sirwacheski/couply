@@ -13,9 +13,9 @@ export function FeatureOption({ size, title, icon, onSelect }: Properties) {
     width: size,
     height: size,
     padding: size * 0.125,
-    borderRadius: size * 0.2,
+    borderRadius: size * 0.18,
     justifyContent: "space-between",
-    backgroundColor: "#F01448",
+    backgroundColor: "rgba(0,0,0,0.05)",
   }), [size]);
 
   return (

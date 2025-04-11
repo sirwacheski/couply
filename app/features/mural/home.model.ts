@@ -28,6 +28,10 @@ export function useMuralModel() {
     });
   }
 
+  function handleNavigateToFeature(feature: keyof PrivateRouteList) {
+    navigation.navigate(feature as any);
+  }
+
   // Side effects
   React.useEffect(() => {
     const { isFetched, error, data } = profileQuery;
@@ -58,6 +62,7 @@ export function useMuralModel() {
   return {
     muralQuery,
     muralFeatures,
+    handleNavigateToFeature,
     handleNavigateToInvitePartner,
   }
 }

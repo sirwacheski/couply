@@ -6,7 +6,7 @@ import { useMuralModel } from "./home.model";
 
 export default function Mural() {
   const window = useWindowDimensions();
-  const { muralQuery, muralFeatures, handleNavigateToInvitePartner } = useMuralModel();
+  const { muralQuery, muralFeatures, handleNavigateToInvitePartner, handleNavigateToFeature } = useMuralModel();
 
   const getFeatureOptionSize = React.useCallback(() => {
     return window.width / 2 - Screen.Padding - 12
@@ -99,8 +99,8 @@ export default function Mural() {
               key={index}
               icon={item.icon}
               title={item.title}
-              onSelect={() => {}}
               size={getFeatureOptionSize()}
+              onSelect={() => handleNavigateToFeature(item.goTo.screen!)}
               />
             )
           })}

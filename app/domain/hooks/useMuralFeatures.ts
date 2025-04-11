@@ -13,7 +13,7 @@ export function useMuralFeatures(): MuralFeature[] {
 
   features.push({
     title: "Notes",
-    goTo: { screen: "Home" },
+    goTo: { screen: "Notes" },
     icon: require("@assets/icons/journal-alt.png"),
   });
 

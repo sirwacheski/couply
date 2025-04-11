@@ -4,7 +4,11 @@ import { useQuery } from "@tanstack/react-query";
 import { QueryKeys } from "@infra/constants/queries";
 import { useProfileRepository } from "@infra/repositories/ProfileRepository";
 
-export function useSessionProfileQuery() {
+type Options = {
+  refetchOnMount?: boolean;
+}
+
+export function useSessionProfileQuery(options?: Options) {
   const { user } = useAtomValue(SessionAtom);
 
   const queryKey = [QueryKeys.PROFILE, user?.id];
@@ -13,7 +17,7 @@ export function useSessionProfileQuery() {
     enabled: !!user,
     initialData: null,
     queryKey: queryKey,
-
+    refetchOnMount: options?.refetchOnMount ?? true,
     async queryFn() {
       const repository = useProfileRepository();
       const { data, error } = await repository.getOneByUserId(user?.id!);

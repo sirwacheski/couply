@@ -31,7 +31,7 @@ export function Avatar({ uri, size = 50, username, withChangeButton = false, onP
     width: size,
     height: size,
     borderRadius: size / 2,
-    backgroundColor: "#F01448",
+    backgroundColor: "rgba(0,0,0,0.1)",
   }), [size]);
 
   const changeButtonAnimStyle = useAnimatedStyle(() => ({
