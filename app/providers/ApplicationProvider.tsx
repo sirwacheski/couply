@@ -6,6 +6,7 @@ import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { useAuthRepository } from "@infra/repositories/AuthRepository";
 import { KeyboardProvider } from "react-native-keyboard-controller";
+import { MenuProvider } from "react-native-popup-menu";
 
 import QueryProvider from "./QueryProvider";
 
@@ -44,7 +45,9 @@ export default function ApplicationProvider({ children }: React.PropsWithChildre
       <QueryProvider>
         <KeyboardProvider>
           <BottomSheetModalProvider>
-            {children}
+            <MenuProvider>
+              {children}
+            </MenuProvider>
           </BottomSheetModalProvider>
         </KeyboardProvider>
       </QueryProvider>

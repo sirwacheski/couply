@@ -14,7 +14,7 @@
         "app/components/_index.ts"
       ],
       "@infra/*": [
-        "app/infra/*",
+        "app/infra/*"
       ],
       "@atoms": [
         "app/atoms/index.ts"
@@ -24,8 +24,6 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts",
-    "nativewind-env.d.ts",
+    "nativewind-env.d.ts"
   ]
 }

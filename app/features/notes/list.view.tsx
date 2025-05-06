@@ -1,14 +1,16 @@
 import React from "react";
+import { NoteListCard } from "@components";
 import { GoBackButton, Icon, Screen, TextField } from "@components";
-import { RefreshControl, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 import { useNoteListModel } from "./list.model";
 
 export function NoteList() {
-  const { notesListQuery, handleFormatDate, handleNavigateToCreateOrEditNote } = useNoteListModel();
+  const { notesListQuery, handleNavigateToCreateOrEditNote, handleSearchForNote, handleDeleteNote } = useNoteListModel();
 
   return (
     <Screen
+    behavior={"padding"}
     withSafeAreaView={true}>
       <View>
         <GoBackButton />
@@ -31,58 +33,24 @@ export function NoteList() {
       </View>
       <View>
         <TextField
-        placeholder={"Search for notes"}
+        placeholder={"Search for title"}
+        onChangeText={(text) => handleSearchForNote(text)}
         icon={<Icon name="search" color="#fff" size={18} />}
         />
       </View>
       <View
       className="flex-1 mt-10">
         <ScrollView
-        refreshControl={(
-          <RefreshControl 
-          refreshing={notesListQuery.isRefetching}
-          onRefresh={() => notesListQuery.refetch()}
-          />
-        )}>
+        showsVerticalScrollIndicator={false}>
           <View
           className="flex-row flex-wrap justify-between items-start gap-y-2">
             {notesListQuery.data?.map((item) => (
-              <TouchableOpacity
+              <NoteListCard 
+              item={item}
               key={item.id}
-              onPress={() => handleNavigateToCreateOrEditNote(item)}
-              className="w-[49%] h-60 p-5 rounded-[30] bg-black/5">
-                <View
-                className="flex-row justify-between items-start">
-                  <Text
-                  numberOfLines={3}
-                  className="flex-1 text-xl font-bold color-white">
-                    {item.title}
-                  </Text>
-                  <TouchableOpacity
-                  className="w-10 h-10 items-end">
-                    <Icon
-                    size={24}
-                    color="#fff"
-                    name="more-horizontal"
-                    />
-                  </TouchableOpacity>
-                </View>
-                <View
-                className="flex-1 my-3">
-                  <Text
-                  numberOfLines={10}
-                  className="color-white">
-                    {item.content}
-                  </Text>
-                </View>
-                <View>
-                  <Text
-                  numberOfLines={1}
-                  className="font-light text-sm color-slate-50">
-                    {handleFormatDate(new Date(item.created_at))}
-                  </Text>
-                </View>
-              </TouchableOpacity>
+              onDelete={() => handleDeleteNote(item.id)}
+              onSelect={() => handleNavigateToCreateOrEditNote(item)}
+              />
             ))}
           </View>
         </ScrollView>

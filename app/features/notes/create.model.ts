@@ -9,6 +9,7 @@ import { useNoteRepository } from "@infra/repositories/NoteRepository";
 import { useSessionProfileQuery } from "app/domain/useCases/useSessionProfileQuery";
 import { NavigationProp, RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { CreateNoteSchema, CreateNoteSchemaType } from "app/domain/validations/CreateNoteSchema";
+import { useRichTextEditorRef } from "@components";
 
 export function useCreateNoteModel() {
   // Navigation
@@ -16,6 +17,7 @@ export function useCreateNoteModel() {
   const { params } = useRoute<RouteProp<PrivateRouteList, "CreateOrEditNote">>();
 
   // References
+  const richEditorRef = useRichTextEditorRef();
   const changeFieldDebounceRef = React.useRef<NodeJS.Timeout | null>(null);
 
   // Queries
@@ -87,9 +89,15 @@ export function useCreateNoteModel() {
     }, 1200);
   }
 
+  function handleFocusRichEditor() {
+    richEditorRef.current?.focusContentEditor();
+  }
+
   return {
     form,
+    richEditorRef,
     handleFormatDate,
     handleChangeField,
+    handleFocusRichEditor
   }
 }

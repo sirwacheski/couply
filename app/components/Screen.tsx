@@ -8,11 +8,12 @@ import { KeyboardAvoidingView } from "react-native-keyboard-controller";
 type ScreenProps = {
   children?: React.ReactNode;
   withSafeAreaView?: boolean;
+  behavior?: "padding" | "position" | "height" | undefined;
 }
 
 const AnimateLinearGradient = Animated.createAnimatedComponent(LinearGradient);
 
-function Screen({ withSafeAreaView, children }: ScreenProps) {
+function Screen({ withSafeAreaView, behavior = "position", children }: ScreenProps) {
   // Common hooks
   const insets = useSafeAreaInsets();
 
@@ -33,7 +34,7 @@ function Screen({ withSafeAreaView, children }: ScreenProps) {
     start={{ x: 0, y: 0 }}
     colors={["#FF0054", "#F93A3A"]}>
       <KeyboardAvoidingView
-      behavior="position"
+      behavior={behavior}
       keyboardVerticalOffset={20}>
         <ScrollView
         scrollEnabled={false}

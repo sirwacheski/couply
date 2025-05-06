@@ -9,3 +9,5 @@ export { FeatureOption } from "./FeatureOption";
 export { BottomTabBar } from "./BottomTabBar";
 export { GoBackButton } from "./GoBackButton";
 export { AttachmentPickerBottomSheet, useAttachmentPickerBottomSheet, AttachmentAsset } from "./AttachmentPickerBottomSheet";
+export { NoteListCard, NoteListCardProps } from "./NoteListCard";
+export { RichTextEditor, RichTextEditorProps, useRichTextEditorRef } from "./RichTextEditor";

@@ -10,14 +10,21 @@ export function useNoteRepository() {
       .single();
   }
 
-  async function getManyByMuralId(id: string) {
+  async function getManyByMuralId(id: string, search?: string) {
     const fields = "*";
 
-    return supabase
+    const query = supabase
      .from(Note.name)
      .select<typeof fields, Note>(fields)
      .eq("mural_id", id)
-     .order("created_at", { ascending: false });
+     .is("disabled_at", null)
+     .order("created_at", { ascending: false })
+
+    if(search && search.length > 0) {
+      query.ilike("title", `%${search}%`);
+    }
+
+    return query;
   }
 
   async function upsert(dataToSave: Partial<Note>) {
@@ -28,9 +35,19 @@ export function useNoteRepository() {
       .single();
   }
 
+  async function disable(id: Note["id"]) {
+    const date = new Date();
+
+    return supabase
+      .from(Note.name)
+      .update({ disabled_at: date.toISOString() })
+      .eq("id", id);
+  }
+
   return {
     getOneById,
     getManyByMuralId,
     upsert,
+    disable,
   }
 }
