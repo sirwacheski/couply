@@ -85,6 +85,7 @@ export function NoteListCard({ item, onSelect, onDelete }: NoteListCardProps) {
           enabled={false}
           onChange={() => {}}
           value={item.content ?? ""}
+          cssStyle="font-size: 14px;"
           />
         </View>
         <View>

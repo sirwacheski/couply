@@ -76,6 +76,7 @@ export function CreateNote() {
           autoFocus={true}
           autoCorrect={true}
           value={field.value ?? ""}
+          cssStyle="font-size: 18px;"
           onChange={(value) => handleChangeField(field.name, value)}
           />
         )}

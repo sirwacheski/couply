@@ -6,6 +6,7 @@ export type RichTextEditorProps = {
   enabled?: boolean;
   autoFocus?: boolean;
   autoCorrect?: boolean;
+  cssStyle?: string;
   onChange: (value: string) => void;
 }
 
@@ -18,6 +19,7 @@ export const RichTextEditor = React.forwardRef(({
   onChange,
   autoFocus,
   autoCorrect,
+  cssStyle = "",
   enabled = true, 
 }: RichTextEditorProps, ref: React.Ref<RichEditor>) => {
   // References
@@ -47,7 +49,7 @@ export const RichTextEditor = React.forwardRef(({
       color: "white",
       caretColor: "white",
       backgroundColor: "transparent",
-      contentCSSText: `padding: 0px; font-size: 18px;`,
+      contentCSSText: `padding: 0px; ${cssStyle}`,
     }}
     style={{
       flex: 1,
